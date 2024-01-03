@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import React ,{lazy} from "react"
+import { lazy } from "react"
 
 
- const Home  = lazy(() => import("./component/Home"))
- const Cart = lazy(() =>import("./component/Cart"))
- const Search  = lazy(() => import("./component/Search"))
+const Home = lazy(() => import("./component/Home"))
+const Cart = lazy(() => import("./component/Cart"))
+const Search = lazy(() => import("./component/Search"))
 
 
 
@@ -21,8 +21,9 @@ function App() {
 
         </div>
         <Routes>
-          <Route path="/" element={<Home/>}>
-            <Route path="/cart" element ={}
+          <Route path="/" element={<Home />}>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/search" element={<Search />} />
 
           </Route>
         </Routes>
