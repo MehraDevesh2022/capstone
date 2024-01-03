@@ -1,4 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import React ,{lazy} from "react"
+
+
+ const Home  = lazy(() => import("./component/Home"))
+ const Cart = lazy(() =>import("./component/Cart"))
+ const Search  = lazy(() => import("./component/Search"))
+
 
 
 
@@ -14,7 +21,8 @@ function App() {
 
         </div>
         <Routes>
-          <Route path="/" element={<><div><center>this is first component</center></div></>}>
+          <Route path="/" element={<Home/>}>
+            <Route path="/cart" element ={}
 
           </Route>
         </Routes>
